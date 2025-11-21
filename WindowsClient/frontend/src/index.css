@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --wails-draggable: drag;
+}
+
+body {
+  background-color: transparent; /* Allow Wails translucency */
+}
+
+/* Custom Scrollbar to look like macOS */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Wails Drag Region */
+.drag-region {
+  --wails-draggable: drag;
+  -webkit-app-region: drag;
+}
+
+.no-drag {
+  --wails-draggable: no-drag;
+  -webkit-app-region: no-drag;
+}
